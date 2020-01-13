@@ -1,0 +1,17 @@
+version: "3"
+services:
+  app:
+    container_name: netguru
+    restart: always
+    build: ./
+    ports:
+      - "5006:5006"
+    volumes:
+      - .:/netguru
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"

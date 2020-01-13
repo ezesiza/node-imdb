@@ -1,0 +1,32 @@
+{
+    "name": "netguru",
+    "version": "1.0.0",
+    "description": "movie database restful API",
+    "main": "server.js",
+    "scripts": {
+        "client-install": "npm install --prefix client",
+        "test": " mocha --timeout 10000",
+        "start": "nodemon server.js",
+        "server": "nodemon server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "author": "Eze Ejike",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "*",
+        "config": "^3.2.4",
+        "express": "*",
+        "mongoose": "*",
+        "morgan": "^1.9.1",
+        "request": "2.88.0",
+        "validator": "^12.1.0"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "mocha": "^7.0.0",
+        "nodemon": "*"
+    }
+}
