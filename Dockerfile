@@ -1,6 +1,6 @@
 FROM node:10
 # Create app directory
-WORKDIR C:/Users/Eze.000/Documents/DevFx/Nodejs/NetGuru
+WORKDIR /NetGuru
 # Install app dependencies
 COPY package.json package.json
 RUN npm install -g nodemon
