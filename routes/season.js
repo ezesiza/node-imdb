@@ -27,8 +27,6 @@ router.post('/:serie/:season/:episode/:apikey', function(req, res) {
     //http://www.omdbapi.com/?t=Game%20of%20Thrones&Season=1&Episode=1
     console.log(seasonEpisodeUrl);
 
-
-
     request(seasonEpisodeUrl, function(error, response, body) {
         if (!error && response.statusCode == 200) {
             res.json(JSON.parse(body));
