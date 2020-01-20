@@ -3,7 +3,7 @@
 
 
 ## Running the program in docker.
-navigate to <DOCKERHOST>:5006/routes/movies/all  (for example if you want to GET all movies)
+navigate to `${DOCKERHOST}`:5006/routes/movies/all  (for example if you want to GET all movies)
 
 This is a simple REST API for us - a basic movie database interacting with external API. Here’s full specification of endpoints contained in this project.
 
